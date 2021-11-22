@@ -1,5 +1,8 @@
 name: 'serato-lhci-notification'
 description: 'Post LHCI performance test results to Slack'
+branding:
+  icon: 'bell'
+  color: 'blue'
 inputs:
   webhook_url:
     description: 'Webhook URL of the Slack channel that notifications will be posted to'
