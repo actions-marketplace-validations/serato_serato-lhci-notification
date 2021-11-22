@@ -1,0 +1,33 @@
+name: 'serato-lhci-notification'
+description: 'Post LHCI performance test results to Slack'
+inputs:
+  webhook_url:
+    description: 'Webhook URL of the Slack channel that notifications will be posted to'
+    required: true
+  run_url:
+    description: 'URL of the workflow that this action is running within'
+    required: true
+  revision:
+    description: 'Git revision/branch that the tests were running from'
+    required: true
+  results:
+    description: 'Performance test results as a JSON array'
+    required: true
+  links:
+    description: 'Links to Lighthouse results'
+    required: true
+  matrix_name:
+    description: 'Matrix name for this job (desktop or mobile)'
+    required: true
+  commit_message:
+    description: 'Message for the commit that triggered this workflow'
+    required: true
+  user:
+    description: 'User whose commit triggered the workflow'
+    required: true
+outputs:
+  time:
+    description: 'The time the action was completed'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

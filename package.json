@@ -1,0 +1,16 @@
+{
+  "name": "serato-lhci-notification",
+  "description": "Sends page performance test failures to a Slack channel",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx @vercel/ncc build index.js"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.4.1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "axios": "^0.24.0"
+  }
+}
