@@ -1,4 +1,4 @@
-# LHCI Slack Notification
+# Serato LHCI Notification
 
 Sends a notification of any failures among Lighthouse CI audits to a Slack channel.
 
@@ -16,7 +16,7 @@ Sends a notification of any failures among Lighthouse CI audits to a Slack chann
 
 - **time**: The time that the workflow was completed
 
-## Example
+## Usage
 
 As a step in a GitHub Actions workflow:
 
